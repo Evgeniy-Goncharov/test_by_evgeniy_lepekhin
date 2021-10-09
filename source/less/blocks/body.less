@@ -1,0 +1,119 @@
+.body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: @basic-text;
+}
+
+.body--dark-theme {
+  .nav {
+    background-color: @dark-body-black;
+  }
+
+  .nav__header {
+    background-color: @dark-header-black;
+  }
+
+  .nav-toggle {
+    &:hover::after,
+    &:focus::after {
+      background-color: @basic-white;
+      box-shadow: 0 -8px 0 0 @basic-white, 0 8px 0 0 @basic-white;
+    }
+  }
+
+  .logo {
+    svg {
+      fill: @basic-white;
+    }
+  }
+
+  .nav__list--border-bottom {
+    border-color: @dark-header-black;
+  }
+
+  .nav__search-label {
+    &:hover,
+    &:focus {
+      border-color: @basic-lilac;
+    }
+  }
+
+  .nav__search {
+    border-color: @basic-dark-text;
+
+    &:focus + svg {
+      stroke: @basic-white;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @basic-white;
+    }
+  }
+
+  .nav__item {
+    svg {
+      stroke: @basic-dark-grey;
+    }
+  }
+
+  .nav__item--active {
+    & > a {
+      color: @basic-white;
+    }
+
+    background-color: @basic-dark-text;
+
+    svg {
+      z-index: 0;
+      stroke: @basic-white;
+    }
+  }
+
+  .nav__item > a:hover,
+  .nav__item > a:focus {
+    color: @basic-white;
+
+    svg {
+      stroke: @basic-white;
+    }
+  }
+
+  .projects-list__link {
+    &:hover,
+    &:focus {
+      color: @basic-white;
+    }
+  }
+
+  .developer {
+    background-color: @dark-header-black;
+
+    &__name {
+      color: @basic-white;
+    }
+
+    &__description {
+      color: @basic-grey;
+    }
+  }
+
+  .developer__menu-button {
+    &::before {
+      border-color: @basic-dark-grey;
+      box-shadow: 0 -7px 0 0 @basic-dark-grey, 0 7px 0 0 @basic-dark-grey;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      border-color: @basic-white;
+      box-shadow: 0 -7px 0 0 @basic-white, 0 7px 0 0 @basic-white;
+    }
+  }
+}

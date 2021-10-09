@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="body body--dark-theme">
+  <header class="header">
+    <nav class="nav page__nav">
+      <div class="nav__header">
+        <button class="nav-toggle nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        <a class="logo">
+          <svg role="img" width="81" height="31" alt="Студия Евгения Лепёхина">
+            <use href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="nav__list nav__list--border-bottom">
+        <li class="nav__item nav__item--search">
+          <form class="nav__search-form" method="GET" action="">
+            <label class="nav__search-label">
+              <span class="visually-hidden">Найти на странице</span>
+              <input class="nav__search" type="search" placeholder="Search">
+              <svg role="img" width="20" height="20" alt="Открыть поиск">
+                <use href="img/sprite.svg#search"></use>
+              </svg>
+            </label>
+          </form>
+        </li>
+
+        <li class="nav__item nav__item--active">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Перейти на главную страницу">
+              <use href="img/sprite.svg#home"></use>
+            </svg>
+            <span>Главная</span></a>
+        </li>
+
+        <li class="nav__item nav__item--inbox-active">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Ваши входящие сообщения">
+              <use href="img/sprite.svg#inbox"></use>
+            </svg>
+            <span>Входящие</span></a>
+          <span class="nav__counter">12</span>
+        </li>
+
+        <li class="nav__item">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Открыть список задач">
+              <use href="img/sprite.svg#list"></use>
+            </svg>
+            <span>Задачи</span></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Показатели Вашей активности">
+              <use href="img/sprite.svg#activity"></use>
+            </svg>
+            <span>Активность</span></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Посмотреть список участников команды">
+              <use href="img/sprite.svg#users"></use>
+            </svg>
+            <span>Команда</span></a>
+        </li>
+
+
+      </ul>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--projects">
+          <a href="#">
+            <svg role="img" width="20" height="20" alt="Перейти к проектам">
+              <use href="img/sprite.svg#projects"></use>
+            </svg>
+            <span>Проекты</span>
+          </a>
+          <ul class="projects-list">
+            <li><a class="projects-list__link projects-list__link--purple-before" href="#">Дизайн</a></li>
+            <li><a class="projects-list__link projects-list__link--lime-before" href="#">Веб</a></li>
+            <li><a class="projects-list__link projects-list__link--pink-before" href="#">Редактура</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav__footer">
+        <a class="button nav__button" href="#">
+          <svg role="img" width="16" height="16" alt="Создать новый проект">
+            <use href="img/sprite.svg#plus"></use>
+          </svg>
+          <span>Создать проект</span></a>
+        <article class="developer">
+          <picture>
+            <source type="image/webp"
+            srcset="img/content/avatar.webp 1x, img/content/avatar@2x.webp 2x">
+            <img class="developer__avatar" src="img/content/avatar.jpg" srcset="img/content/avatar@2x.jpg 2x" width="40"
+              height="40" alt="Разработчик Евгений Гончаров - продвинутый специалист приятной наружности">
+          </picture>
+          <div>
+            <h2 class="developer__name">Евгений Гончаров</h2>
+            <p class="developer__description">Разработчик</p>
+          </div>
+
+          <button class="developer__menu-button"><span class="visually-hidden">Меню разработчика</span></button>
+        </article>
+      </div>
+    </nav>
+  </header>
+  <script src="js/script.min.js"></script>
+</body>
+
+
+</html>

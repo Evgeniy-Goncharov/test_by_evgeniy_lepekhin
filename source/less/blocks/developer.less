@@ -1,0 +1,73 @@
+.developer {
+  background-color: @basic-footer-bg;
+  padding: 24px 0;
+  display: grid;
+
+  div {
+    align-self: center;
+  }
+}
+
+.developer__avatar {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.developer__name {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-style: normal;
+  color: @basic-dark-text;
+}
+
+.developer__description {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: @basic-dark-grey;
+}
+
+.developer__menu-button {
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  margin-right: 24px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  align-self: center;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: 2px solid @basic-grey;
+    box-shadow: 0 -7px 0 0 @basic-grey, 0 7px 0 0 @basic-grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+  }
+
+  &:hover::before {
+    border: 2px solid @basic-lilac;
+    box-shadow: 0 -7px 0 0 @basic-lilac, 0 7px 0 0 @basic-lilac;
+  }
+}

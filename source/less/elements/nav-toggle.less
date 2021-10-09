@@ -1,0 +1,31 @@
+.nav-toggle {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 38px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: @basic-dark-grey;
+    box-shadow: 0 -8px 0 0 @basic-dark-grey, 0 8px 0 0 @basic-dark-grey;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: @basic-lilac;
+    box-shadow: 0 -8px 0 0 @basic-lilac, 0 8px 0 0 @basic-lilac;
+  }
+}

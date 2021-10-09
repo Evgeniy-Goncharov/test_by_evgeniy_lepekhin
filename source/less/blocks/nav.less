@@ -1,0 +1,303 @@
+.nav {
+  width: 98px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: min-content min-content 1fr min-content;
+  box-sizing: border-box;
+}
+
+.nav--opened {
+  width: 100%;
+  max-width: 342px;
+
+  .nav__header {
+    justify-content: flex-start;
+  }
+
+  .nav__toggle {
+    margin-left: 32px;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+
+  .nav__list {
+    width: auto;
+    margin: 0 24px;
+  }
+
+  .nav__item {
+    width: 100%;
+
+    & > a {
+      padding-left: 44px;
+    }
+
+    span {
+      margin-left: 0;
+    }
+
+    svg {
+      left: 16px;
+    }
+  }
+
+  .nav__item--search {
+    svg {
+      stroke: @basic-search;
+      transform: scale(0.8);
+      left: 14px;
+    }
+  }
+
+  .nav__search {
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .nav__item--inbox-active::before {
+    display: none;
+  }
+
+  .nav__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @basic-lilac;
+    color: @basic-white;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 700;
+  }
+
+  .projects-list {
+    display: block;
+  }
+
+  .nav__button {
+    width: auto;
+    margin: 0 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: inherit;
+    min-height: 36px;
+
+    svg {
+      position: static;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .developer {
+    grid-template-columns: min-content 1fr min-content;
+  }
+
+  .developer__avatar {
+    margin: 0 16px 0 24px;
+  }
+
+  .developer__name {
+    display: block;
+  }
+
+  .developer__description {
+    display: block;
+  }
+
+  .developer__menu-button {
+    display: block;
+  }
+}
+
+.nav__header {
+  min-height: 84px;
+  box-sizing: border-box;
+  background-color: @basic-light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.nav__toggle {
+  margin: 0 auto;
+}
+
+.nav__list {
+  width: min-content;
+  margin: 0 auto;
+  padding: 32px 0 31px;
+  list-style: none;
+
+  &--border-bottom {
+    border-bottom: 1px solid @basic-border;
+  }
+}
+
+.nav__item {
+  display: flex;
+  width: 36px;
+  min-height: 36px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  & > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: @basic-text;
+    text-decoration: none;
+    padding: 8px 10px 8px 37px;
+  }
+
+  a:hover,
+  a:focus {
+    color: @basic-lilac;
+
+    svg {
+      stroke: @basic-lilac;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    margin: auto 0;
+    fill: none;
+    stroke: @basic-grey;
+  }
+
+  span {
+    margin-left: 50px;
+  }
+
+  &--active {
+    background-color: @basic-light-lilac;
+
+    svg {
+      stroke: @basic-lilac;
+    }
+
+    & > a {
+      color: @basic-lilac;
+    }
+  }
+
+  &--search {
+    position: relative;
+    margin-bottom: 16px;
+
+    svg {
+      stroke: @basic-dark-grey;
+    }
+  }
+
+  &--inbox-active {
+    position: relative;
+  }
+
+  &--inbox-active::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @basic-dark-lilac;
+  }
+
+  &--projects {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.nav__search-form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav__search-label {
+  &:hover,
+  &:focus {
+    border-color: @basic-lilac;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    margin: auto 0;
+    fill: none;
+    stroke: @basic-grey;
+    pointer-events: none;
+  }
+}
+
+.nav__search {
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid @basic-middle-grey;
+  border-radius: 4px;
+  background: transparent;
+
+  &:focus + svg {
+    stroke: @basic-lilac;
+  }
+
+  &::placeholder {
+    color: @basic-grey;
+  }
+}
+
+.nav__counter {
+  display: none;
+}
+
+.nav__button {
+  margin: 0 auto 25px;
+  font-size: 12px;
+  line-height: 16px;
+
+  span {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,41 @@
+.projects-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+  list-style: none;
+  position: absolute;
+  top: 36px;
+}
+
+.projects-list__link {
+  display: block;
+  padding: 12px 32px;
+  position: relative;
+  color: @basic-text;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    margin: auto 0;
+  }
+
+  &--purple-before::before {
+    background-color: @basic-purple;
+  }
+
+  &--lime-before::before {
+    background-color: @basic-lime;
+  }
+
+  &--pink-before::before {
+    background-color: @basic-pink;
+  }
+}
